@@ -1,0 +1,17 @@
+version: "3.9" # Versão compatível e estável do Docker Compose
+
+services:
+  db:
+    image: postgres:16-alpine # Versão leve baseada em Alpine Linux para menor footprint
+    restart: always # Reinicia automaticamente se cair
+    environment:
+      POSTGRES_USER: user # Usuário padrão;
+      POSTGRES_PASSWORD: password # Senha;
+      POSTGRES_DB: mydb # Nome do banco de dados padrão;
+    ports:
+      - "5432:5432" # Mapeia a porta 5432 do host para o container
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Persistência de dados para evitar perda ao parar o container
+
+volumes:
+  pgdata: # Volume nomeado para dados do PostgreSQL
