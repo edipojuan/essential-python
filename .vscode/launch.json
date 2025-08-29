@@ -1,0 +1,38 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Executa o arquivo Python atual
+      "name": "Python Debugger: Arquivo Atual",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      // Executa sempre o basic.py na raiz do projeto
+      "name": "Python Debugger: basic.py",
+      "type": "debugpy",
+      "request": "launch",
+      // "program": "${file}", // arquivo aberto.
+      "program": "${workspaceFolder}/src/basic.py",
+      "console": "integratedTerminal",
+      "args": ["--debug", "--port", "8080"]
+    },
+    {
+      // Executa os testes usando pytest
+      "name": "Python Debugger: Pytest",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "console": "integratedTerminal",
+      "args": [
+        "-v", // modo verboso
+        "${workspaceFolder}/tests" // pasta de testes
+      ]
+    }
+  ]
+}
