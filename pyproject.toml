@@ -9,8 +9,18 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "psycopg2-binary (>=2.9.10,<3.0.0)"
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "fastapi (>=0.116.1,<0.117.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "uvicorn (>=0.35.0,<0.36.0)"
 ]
+
+[tool.poetry.scripts]
+start = "essential_python.fastapi:main"
+
+[[tool.poetry.packages]]
+include = "essential_python"
+from = "src"
 
 
 [build-system]
