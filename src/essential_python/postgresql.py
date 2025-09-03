@@ -4,9 +4,9 @@ import psycopg2
 # Substitua com os dados do seu banco de dados PostgreSQL
 db_params = {
     "host": "localhost",       # ou o IP/endereço do seu servidor
-    "database": "mydb",
-    "user": "user",
-    "password": "password",
+    "database": "langfuse",
+    "user": "postgres",
+    "password": "postgres",
     "port": "5432"           # Opcional, 5432 é o padrão
 }
 

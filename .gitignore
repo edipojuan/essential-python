@@ -90,3 +90,5 @@ __pypackages__/
 
 # Optional: ignore local configuration files
 *.env
+
+test.http
